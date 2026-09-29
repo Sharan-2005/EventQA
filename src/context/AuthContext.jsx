@@ -76,10 +76,12 @@ export const AuthProvider = ({ children }) => {
   };
 
   const register = async (fullName, email, phone, password) => {
+    const redirectUrl = `${window.location.origin}/dashboard`;
     const { data, error } = await supabase.auth.signUp({
       email,
       password,
       options: {
+        emailRedirectTo: redirectUrl,
         data: {
           full_name: fullName,
           phone: phone,
