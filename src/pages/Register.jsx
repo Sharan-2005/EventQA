@@ -74,10 +74,13 @@ export const Register = () => {
       }, 1500);
     } catch (err) {
       console.error('Registration failed:', err);
-      if (err.message && err.message.toLowerCase().includes('already registered')) {
+      const msg = err.message ? err.message.toLowerCase() : '';
+      if (msg.includes('already registered') || msg.includes('user already exists')) {
         setError('You have already registered with this email.');
+      } else if (msg.includes('rate limit') || msg.includes('rate_limit')) {
+        setError('Supabase email rate limit reached. Please disable "Confirm email" in Supabase Auth > Providers > Email for instant registration.');
       } else {
-        setError('Something went wrong. Please try again.');
+        setError(err.message || 'Something went wrong. Please try again.');
       }
     } finally {
       setLoading(false);
