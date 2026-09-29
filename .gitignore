@@ -26,3 +26,7 @@ dist-ssr
 # Environment variables
 .env
 .env.production
+
+# Local Capstone Report Document (Do not push)
+STQA_Capstone_Report_Data.md
+EventQA_STQA_Project_Report.md
