@@ -1,0 +1,484 @@
+{
+  "id": "eventqa-stqa-all-passing",
+  "version": "2.0",
+  "name": "EventQA STQA Automation - Passing Test Suite",
+  "url": "https://event-qa-bay.vercel.app",
+  "tests": [
+    {
+      "id": "pass01-home",
+      "name": "PASS01 - Home Page Loads",
+      "commands": [
+        {
+          "id": "1",
+          "command": "open",
+          "target": "/",
+          "value": ""
+        },
+        {
+          "id": "2",
+          "command": "assertElementPresent",
+          "target": "xpath=//*[contains(normalize-space(.),\"EventQA\")]",
+          "value": ""
+        },
+        {
+          "id": "3",
+          "command": "assertElementPresent",
+          "target": "xpath=//*[contains(normalize-space(.),\"Seamless Online Event Registration\")]",
+          "value": ""
+        }
+      ]
+    },
+    {
+      "id": "pass02-events",
+      "name": "PASS02 - Events Page Loads",
+      "commands": [
+        {
+          "id": "1",
+          "command": "open",
+          "target": "/events",
+          "value": ""
+        },
+        {
+          "id": "2",
+          "command": "assertElementPresent",
+          "target": "xpath=//*[contains(normalize-space(.),\"Tech Innovation Summit 2026\")]",
+          "value": ""
+        },
+        {
+          "id": "3",
+          "command": "assertElementPresent",
+          "target": "xpath=//*[contains(normalize-space(.),\"Web Development Workshop\")]",
+          "value": ""
+        },
+        {
+          "id": "4",
+          "command": "assertElementPresent",
+          "target": "xpath=//*[contains(normalize-space(.),\"AI & Machine Learning Seminar\")]",
+          "value": ""
+        }
+      ]
+    },
+    {
+      "id": "pass03-search",
+      "name": "PASS03 - Event Search",
+      "commands": [
+        {
+          "id": "1",
+          "command": "open",
+          "target": "/events",
+          "value": ""
+        },
+        {
+          "id": "2",
+          "command": "type",
+          "target": "css=[data-testid=\"event-search\"]",
+          "value": "AI"
+        },
+        {
+          "id": "3",
+          "command": "assertElementPresent",
+          "target": "xpath=//*[contains(normalize-space(.),\"AI & Machine Learning Seminar\")]",
+          "value": ""
+        }
+      ]
+    },
+    {
+      "id": "pass04-filter",
+      "name": "PASS04 - Category Filter",
+      "commands": [
+        {
+          "id": "1",
+          "command": "open",
+          "target": "/events",
+          "value": ""
+        },
+        {
+          "id": "2",
+          "command": "select",
+          "target": "css=[data-testid=\"event-filter\"]",
+          "value": "label=Workshop"
+        },
+        {
+          "id": "3",
+          "command": "assertElementPresent",
+          "target": "xpath=//*[contains(normalize-space(.),\"Web Development Workshop\")]",
+          "value": ""
+        }
+      ]
+    },
+    {
+      "id": "pass05-admin-login",
+      "name": "PASS05 - Admin Login",
+      "commands": [
+        {
+          "id": "1",
+          "command": "open",
+          "target": "/login",
+          "value": ""
+        },
+        {
+          "id": "2",
+          "command": "type",
+          "target": "css=[data-testid=\"login-email\"]",
+          "value": "sha.suv.rt23@dypatil.edu"
+        },
+        {
+          "id": "3",
+          "command": "type",
+          "target": "css=[data-testid=\"login-password\"]",
+          "value": "123456"
+        },
+        {
+          "id": "4",
+          "command": "click",
+          "target": "css=[data-testid=\"login-button\"]",
+          "value": ""
+        },
+        {
+          "id": "5",
+          "command": "pause",
+          "target": "2000",
+          "value": ""
+        },
+        {
+          "id": "6",
+          "command": "assertElementPresent",
+          "target": "xpath=//*[contains(normalize-space(.),\"Sharan Suvarna\")]",
+          "value": ""
+        }
+      ]
+    },
+    {
+      "id": "pass06-admin-dashboard",
+      "name": "PASS06 - Admin Dashboard",
+      "commands": [
+        {
+          "id": "1",
+          "command": "open",
+          "target": "/login",
+          "value": ""
+        },
+        {
+          "id": "2",
+          "command": "type",
+          "target": "css=[data-testid=\"login-email\"]",
+          "value": "sha.suv.rt23@dypatil.edu"
+        },
+        {
+          "id": "3",
+          "command": "type",
+          "target": "css=[data-testid=\"login-password\"]",
+          "value": "123456"
+        },
+        {
+          "id": "4",
+          "command": "click",
+          "target": "css=[data-testid=\"login-button\"]",
+          "value": ""
+        },
+        {
+          "id": "5",
+          "command": "pause",
+          "target": "2000",
+          "value": ""
+        },
+        {
+          "id": "6",
+          "command": "assertElementPresent",
+          "target": "xpath=//*[contains(normalize-space(.),\"Sharan Suvarna\")]",
+          "value": ""
+        },
+        {
+          "id": "7",
+          "command": "assertElementPresent",
+          "target": "xpath=//*[contains(normalize-space(.),\"Your Registered Events\")]",
+          "value": ""
+        }
+      ]
+    },
+    {
+      "id": "pass07-normal-login",
+      "name": "PASS07 - Normal User Login",
+      "commands": [
+        {
+          "id": "1",
+          "command": "open",
+          "target": "/login",
+          "value": ""
+        },
+        {
+          "id": "2",
+          "command": "type",
+          "target": "css=[data-testid=\"login-email\"]",
+          "value": "vishaltilokani555@gmail.com"
+        },
+        {
+          "id": "3",
+          "command": "type",
+          "target": "css=[data-testid=\"login-password\"]",
+          "value": "vishal@123"
+        },
+        {
+          "id": "4",
+          "command": "click",
+          "target": "css=[data-testid=\"login-button\"]",
+          "value": ""
+        },
+        {
+          "id": "5",
+          "command": "pause",
+          "target": "2000",
+          "value": ""
+        },
+        {
+          "id": "6",
+          "command": "assertElementPresent",
+          "target": "xpath=//*[contains(normalize-space(.),\"Vishal Tilokani\")]",
+          "value": ""
+        }
+      ]
+    },
+    {
+      "id": "pass08-rbac",
+      "name": "PASS08 - Normal User Admin Restriction",
+      "commands": [
+        {
+          "id": "1",
+          "command": "open",
+          "target": "/login",
+          "value": ""
+        },
+        {
+          "id": "2",
+          "command": "type",
+          "target": "css=[data-testid=\"login-email\"]",
+          "value": "vishaltilokani555@gmail.com"
+        },
+        {
+          "id": "3",
+          "command": "type",
+          "target": "css=[data-testid=\"login-password\"]",
+          "value": "vishal@123"
+        },
+        {
+          "id": "4",
+          "command": "click",
+          "target": "css=[data-testid=\"login-button\"]",
+          "value": ""
+        },
+        {
+          "id": "5",
+          "command": "pause",
+          "target": "1500",
+          "value": ""
+        },
+        {
+          "id": "6",
+          "command": "open",
+          "target": "/admin",
+          "value": ""
+        },
+        {
+          "id": "7",
+          "command": "pause",
+          "target": "1000",
+          "value": ""
+        },
+        {
+          "id": "8",
+          "command": "assertElementNotPresent",
+          "target": "css=[data-testid=\"admin-add-event\"]",
+          "value": ""
+        }
+      ]
+    },
+    {
+      "id": "pass09-invalid-login",
+      "name": "PASS09 - Invalid Login",
+      "commands": [
+        {
+          "id": "1",
+          "command": "open",
+          "target": "/login",
+          "value": ""
+        },
+        {
+          "id": "2",
+          "command": "type",
+          "target": "css=[data-testid=\"login-email\"]",
+          "value": "invalid@example.com"
+        },
+        {
+          "id": "3",
+          "command": "type",
+          "target": "css=[data-testid=\"login-password\"]",
+          "value": "WrongPassword123!"
+        },
+        {
+          "id": "4",
+          "command": "click",
+          "target": "css=[data-testid=\"login-button\"]",
+          "value": ""
+        },
+        {
+          "id": "5",
+          "command": "pause",
+          "target": "1500",
+          "value": ""
+        },
+        {
+          "id": "6",
+          "command": "assertElementPresent",
+          "target": "css=[data-testid=\"login-button\"]",
+          "value": ""
+        }
+      ]
+    },
+    {
+      "id": "pass10-logout",
+      "name": "PASS10 - Normal User Logout",
+      "commands": [
+        {
+          "id": "1",
+          "command": "open",
+          "target": "/login",
+          "value": ""
+        },
+        {
+          "id": "2",
+          "command": "type",
+          "target": "css=[data-testid=\"login-email\"]",
+          "value": "vishaltilokani555@gmail.com"
+        },
+        {
+          "id": "3",
+          "command": "type",
+          "target": "css=[data-testid=\"login-password\"]",
+          "value": "vishal@123"
+        },
+        {
+          "id": "4",
+          "command": "click",
+          "target": "css=[data-testid=\"login-button\"]",
+          "value": ""
+        },
+        {
+          "id": "5",
+          "command": "pause",
+          "target": "1500",
+          "value": ""
+        },
+        {
+          "id": "6",
+          "command": "click",
+          "target": "css=[data-testid=\"logout-button\"]",
+          "value": ""
+        },
+        {
+          "id": "7",
+          "command": "pause",
+          "target": "1000",
+          "value": ""
+        },
+        {
+          "id": "8",
+          "command": "assertElementPresent",
+          "target": "css=[data-testid=\"login-button\"]",
+          "value": ""
+        }
+      ]
+    },
+    {
+      "id": "pass11-event-details-button",
+      "name": "PASS11 - Event Details Control Present",
+      "commands": [
+        {
+          "id": "1",
+          "command": "open",
+          "target": "/events",
+          "value": ""
+        },
+        {
+          "id": "2",
+          "command": "assertElementPresent",
+          "target": "css=[data-testid=\"event-details-button\"]",
+          "value": ""
+        }
+      ]
+    },
+    {
+      "id": "pass12-registration-control",
+      "name": "PASS12 - Normal User Registration Controls",
+      "commands": [
+        {
+          "id": "1",
+          "command": "open",
+          "target": "/login",
+          "value": ""
+        },
+        {
+          "id": "2",
+          "command": "type",
+          "target": "css=[data-testid=\"login-email\"]",
+          "value": "vishaltilokani555@gmail.com"
+        },
+        {
+          "id": "3",
+          "command": "type",
+          "target": "css=[data-testid=\"login-password\"]",
+          "value": "vishal@123"
+        },
+        {
+          "id": "4",
+          "command": "click",
+          "target": "css=[data-testid=\"login-button\"]",
+          "value": ""
+        },
+        {
+          "id": "5",
+          "command": "pause",
+          "target": "1500",
+          "value": ""
+        },
+        {
+          "id": "6",
+          "command": "open",
+          "target": "/events",
+          "value": ""
+        },
+        {
+          "id": "7",
+          "command": "assertElementPresent",
+          "target": "css=[data-testid=\"event-register-button\"]",
+          "value": ""
+        }
+      ]
+    }
+  ],
+  "suites": [
+    {
+      "id": "eventqa-passing-suite",
+      "name": "EventQA Passing Test Suite",
+      "persistSession": false,
+      "parallel": false,
+      "timeout": 30000,
+      "tests": [
+        "pass01-home",
+        "pass02-events",
+        "pass03-search",
+        "pass04-filter",
+        "pass05-admin-login",
+        "pass06-admin-dashboard",
+        "pass07-normal-login",
+        "pass08-rbac",
+        "pass09-invalid-login",
+        "pass10-logout",
+        "pass11-event-details-button",
+        "pass12-registration-control"
+      ]
+    }
+  ],
+  "urls": [],
+  "plugins": [],
+  "dependencies": []
+}
