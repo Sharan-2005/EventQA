@@ -7,7 +7,8 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "db:setup": "node scripts/setup-db.js"
+    "db:setup": "node scripts/setup-db.js",
+    "make-admin": "node scripts/set-admin.js"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.49.1",
